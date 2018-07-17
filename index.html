@@ -1,0 +1,31 @@
+<!DOCTYPE html>    
+ <html>    
+ <head>    
+   <title>Employee Details</title>    
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>    
+   <script type="text/javascript" src="employeeController.js"></script>    
+ </head>    
+ <body ng-app="employeeApp">    
+   <div align="center"><p>Employee Information</p></div>    
+   <div ng-controller="employeeCtrl">    
+     <table align="center" border="1">    
+       <tr>    
+         <th>ID</th>    
+         <th>Name</th>    
+         <th>Gender</th>    
+         <th>Salary</th>    
+         <th>Bonus</th>    
+         <th>Total Salary</th>    
+       </tr>    
+       <tr ng-repeat="employee in employees">    
+         <td>{{employee.id}}</td>    
+         <td>{{employee.name}}</td>    
+         <td>{{employee.gender}}</td>    
+         <td>{{employee.salary}}</td>    
+         <td>{{employee.bonus}}</td>    
+         <td>{{(employee.salary)--(employee.bonus)}}</td>    
+       </tr>    
+     </table>    
+   </div>    
+ </body>    
+ </html>  
